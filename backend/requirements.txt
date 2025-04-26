@@ -1,0 +1,9 @@
+Flask
+Flask-SocketIO
+Flask-Cors
+opencv-python
+scikit-learn
+numpy 
+Pillow
+pyttsx3
+eventlet

@@ -1,0 +1,154 @@
+/* src/App.css */
+.App {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 15px;
+  color: white;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.App-header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.status-indicator {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.status-indicator.connected {
+    background-color: lightgreen;
+    color: darkgreen;
+}
+
+.status-indicator.disconnected {
+    background-color: lightcoral;
+    color: darkred;
+}
+
+
+main {
+  padding: 0 20px;
+}
+
+.controls button {
+  margin: 5px 10px;
+  padding: 10px 15px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.controls button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+.status-message {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-left: 5px solid #ccc;
+    text-align: left;
+}
+
+.content-area {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    min-height: 400px; /* Ensure space for video */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Video styling */
+.video-container {
+    position: relative; /* Needed for overlay */
+    width: 640px; /* Match video width */
+    height: 480px; /* Match video height */
+    margin: 15px auto;
+    background-color: #eee; /* Placeholder background */
+    border: 1px solid #ccc;
+}
+
+video {
+    display: block; /* Remove extra space below video */
+    width: 100%;
+    height: 100%;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(255, 0, 0, 0.1); */ /* Optional: visualize canvas */
+}
+
+
+/* Enrollment styling */
+.enroll-prompt input {
+    padding: 8px;
+    margin: 10px;
+    width: 250px;
+}
+
+.enroll-message.error, .vote-result.error {
+    color: red;
+    font-weight: bold;
+}
+
+.enroll-capture progress {
+    width: 80%;
+    max-width: 400px;
+    margin: 10px 0;
+}
+
+/* Voting styling */
+.vote-buttons {
+    margin-top: 20px;
+}
+.vote-buttons button {
+    margin: 5px;
+    padding: 12px 20px;
+    font-size: 1.1em;
+}
+.vote-button.disabled {
+    background-color: #aaa;
+    color: #555;
+    cursor: default;
+}
+
+.vote-status-message {
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.status-identifying { color: #cc7a00; background-color: #fff3e0; }
+.status-recognized { color: green; background-color: #e8f5e9; }
+.status-already_voted { color: red; background-color: #ffebee; }
+.status-no_face { color: grey; background-color: #f5f5f5; }
+.status-error { color: darkred; background-color: #ffebee; }
+
+.vote-result.success {
+    color: green;
+    font-weight: bold;
+}
+
+.idle-mode {
+    padding-top: 50px;
+}

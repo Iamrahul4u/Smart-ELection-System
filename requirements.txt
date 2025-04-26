@@ -1,6 +1,0 @@
-opencv-python
-scikit-learn
-numpy
-Pillow # For Tkinter image display
-# Optional for cross-platform TTS:
-pyttsx3
